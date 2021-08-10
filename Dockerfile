@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk
 #FROM openjdk:11-jdk
-àFROM debian:latest
+#FROM debian:latest
 
 RUN apt-get update && apt-get install -y git curl && rm -rf /var/lib/apt/lists/*
 
