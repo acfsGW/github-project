@@ -11,4 +11,4 @@ RUN apt-get update && \
 
 RUN apt-get update
 
-RUN java -cp dummy.jar com.netsgroup.service.DummyService
+RUN java -cp ./dummy.jar com.netsgroup.service.DummyService
