@@ -11,5 +11,9 @@ RUN apt-get update && \
 
 RUN apt-get update
 
+
+COPY  ./lib/* 	   	/dummy/lib/
+
+
 # Run the app when the container is executed.
-CMD ["java","-DAPPL=TEST","-Duser.timezone=CET", "-Xms32M", "-Xmx128M","-Xss512K","-Djava.rmi.server.hostname=127.0.0.1","-Djava.rmi.server.useLocalHostname=true", "-jar", "dummy.jar"]
+CMD ["java","-DAPPL=TEST","-Duser.timezone=CET", "-Xms32M", "-Xmx128M","-Xss512K","-Djava.rmi.server.hostname=127.0.0.1","-Djava.rmi.server.useLocalHostname=true", "-cp","/dummy/lib/dummy.jar","-jar", "/dummy/lib/dummy.jar"]
